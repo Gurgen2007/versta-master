@@ -2,6 +2,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 .bg{
   width: 100%;
   height: 100vh;
@@ -11,6 +12,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .navigation_bar_box{
   width: 95%;
   height: 60px;
@@ -22,6 +24,7 @@
   display: flex;
   justify-content: space-between;
 }
+
 .nav_title_box{
   width: 10%;
   height: 100%;
@@ -32,6 +35,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .createBtn_box{
   width: 10%;
   height: 100%;
@@ -40,6 +44,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .createBtn{
   width: 100px;
   height: 35px;
@@ -49,20 +54,39 @@
   color: black;
   cursor: pointer;
 }
+
 .general_box{
   width: 10%;
   height: 85%;
   border: 1px solid white;
   border-radius: 5px;
-  background-color: lightgray;
-  opacity: 10;
+  font-size: 16px;
+  background-color: rgb(114, 114, 114);
+  opacity: .6;
   color: white;
   font-size: 29px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 5px;
 }
+
+.general_span{
+  width: 70px;
+  height: 20px;
+  background-color: red;
+  font-size: 18px;
+  border-radius: 15px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+}
+
 .search_box{
   width: 40%;
   height: 100%;
@@ -71,6 +95,7 @@
   background-color: lightgray;
   display: flex;
 }
+
 .Deals_box{
   width: 200px;
   height: 90%;
@@ -81,8 +106,10 @@
   align-items: center;
   justify-content: center;
   font-size: 18px;
+  cursor: pointer;
   margin-top: 3.5px;
 }
+
 .settings_box{
   width: 7%;
   height: 100%;
@@ -91,6 +118,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .settings{
   height: 50px;
   width: 50px;
@@ -99,9 +127,11 @@
   background-image: url('../public/icon.svg');
   background-position: center;
   background-size: 30px 30px;
+  cursor: pointer;
   background-repeat: no-repeat;
   border-radius: 5px;
 }
+
 .nav_bar2_box{
   width: 95%;
   height: 40px;
@@ -112,6 +142,7 @@
   gap: 30px;
 
 }
+
 .nav_bar2{
   width: 400px;
   height: 40px;
@@ -120,6 +151,7 @@
   background-color: lightgray;
   border-radius: 15px;
 }
+
 .nav_bar3{
   width: 400px;
   height: 40px;
@@ -128,6 +160,7 @@
   background-color: lightgray;
   border-radius: 15px;
 }
+
 .search{
   width: 100%;
   height: 95%;
@@ -135,7 +168,10 @@
   border: 1px solid white;
   margin-top: 3px;
   opacity: 0.7;
+  outline: none;
+  padding: 5px;
 }
+
 .main_cont{
   width: 95%;
   height: 800px;

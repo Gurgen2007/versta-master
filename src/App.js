@@ -22,13 +22,14 @@ function App() {
         
         <div className='navigation_bar_box'>
           <div className='nav_title_box'>
-            <p>Deals</p>
+            {/* <p>Deals</p> */}
+            <sub>Deals</sub>
           </div>
           <div className='createBtn_box'> 
             <button className='createBtn' onClick={()=>{Handler()}}>CREATE</button>
           </div>
           <div className='general_box'>
-            <p>General</p>
+            <p>General </p><span className='general_span'>10</span>
           </div>
           <div className='search_box'>
             <div className='Deals_box'>Deals in Progress</div>

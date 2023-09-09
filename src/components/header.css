@@ -16,4 +16,5 @@ header{
     list-style: none;
     gap: 100px;
     font-weight: 600;
+    cursor: pointer;
 }
