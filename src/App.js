@@ -4,21 +4,27 @@ import Header from './components/header';
 import New from './components/New/new';
 import { Model } from './components/model/model';
 import { useState } from 'react';
-
+import { useSelector, useDispatch } from 'react-redux'
+import { setShow } from './store/index';
 function App() {
-  const [isShow, setIsShow] = useState("none")
+  const isShow = useSelector((state) => state.index.show)
+
+ // const [isShow, setIsShow] = useState("none")
+  const dispatch = useDispatch()
   const Handler=()=>{
-    if (isShow == "none") { 
-      setIsShow("block")
-    } else{
-      setIsShow("none")
+   
+ 
+    if (!isShow) { 
+      dispatch(setShow({show:true}))
+    } else{ 
+      dispatch(setShow({show:false}))
     }
   }
   return (
     <div className="App">
       <div className='bg'>
         <Header />
-        <Model isShow={isShow} setIsShow={setIsShow}/>
+        <Model/>
         
         <div className='navigation_bar_box'>
           <div className='nav_title_box'>

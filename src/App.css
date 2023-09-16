@@ -53,6 +53,25 @@
   background-color: lightgreen;
   color: black;
   cursor: pointer;
+  transition: .3s;
+}
+
+.createBtn:hover{
+  transform: scale(1.1);
+  box-shadow: 2px 2px 60px 10px gold ;
+  background-color: rgb(158, 215, 158);
+
+}
+
+.createBtnModel{
+  width: 100px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(8, 179, 253);
+  color: black;
+  cursor: pointer;
+  transition: .3s;
 }
 
 .general_box{
