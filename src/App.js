@@ -12,8 +12,6 @@ function App() {
  // const [isShow, setIsShow] = useState("none")
   const dispatch = useDispatch()
   const Handler=()=>{
-   
- 
     if (!isShow) { 
       dispatch(setShow({show:true}))
     } else{ 
@@ -29,13 +27,13 @@ function App() {
         <div className='navigation_bar_box'>
           <div className='nav_title_box'>
             {/* <p>Deals</p> */}
-            <sub>Deals</sub>
+            <sub>Deals ✰</sub>
           </div>
           <div className='createBtn_box'> 
-            <button className='createBtn' onClick={()=>{Handler()}}>CREATE</button>
+            <button className='createBtn' onClick={()=>{Handler()}}>CREATE ˅</button>
           </div>
           <div className='general_box'>
-            <p>General </p><span className='general_span'>10</span>
+            <p>General <span className='general_span'>10</span>˅</p>
           </div>
           <div className='search_box'>
             <div className='Deals_box'>Deals in Progress</div>

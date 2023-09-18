@@ -75,12 +75,12 @@
 }
 
 .general_box{
-  width: 10%;
+  width: 15%;
   height: 85%;
   border: 1px solid white;
   border-radius: 5px;
-  font-size: 16px;
-  background-color: rgb(114, 114, 114);
+  font-size: 15px;
+  background-color: rgb(78, 127, 155);
   opacity: .6;
   color: white;
   font-size: 29px;
@@ -91,6 +91,15 @@
   text-transform: uppercase;
   cursor: pointer;
   padding: 5px;
+}
+
+.general_box > p{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 5px;
+  /* width: 110%; */
 }
 
 .general_span{
