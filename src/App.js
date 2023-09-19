@@ -36,7 +36,7 @@ function App() {
             <p>General <span className='general_span'>10</span>˅</p>
           </div>
           <div className='search_box'>
-            <div className='Deals_box'>Deals in Progress</div>
+            <div className='Deals_box'><p>Deals in Progress </p>  <span> x</span></div>
             <input className='search' placeholder='search'></input>
           </div>
           <div className='settings_box'>
@@ -44,7 +44,7 @@ function App() {
           </div>
         </div>
         <div className='nav_bar2_box'>
-          <div className='nav_bar2'></div>
+          <div className='nav_bar2'><p className='pipelines'>Pipeline</p><p>List</p><p>Activities</p><p>Calendar</p></div>
           <div className='nav_bar3'></div>
         </div>
         <div className='main_cont'>

@@ -2,19 +2,21 @@ import style from "./model.css"
 import Select from 'react-select'
 import {UserData} from "../fakedata"
 import { Status } from "../fakedata"
-import { useSelector } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
 import { useState } from "react"
+import { setData } from "../../store"
 
 export const Model=()=>{
+    const dispatch = useDispatch()
     const [createData, setCreateData] = useState({
         name: "",
         desc:"",
         userId: 0,
         statusId: 0,
     })
-
     const createClick=()=>{
-
+        dispatch(setData({data:createData}))
+    
     }
     const isShow = useSelector((state) => state.index.show)
     const options = [ 
@@ -27,33 +29,46 @@ export const Model=()=>{
         arr.push({label: item.firstName + ' '+ item.lastName, value: item.id})
     })
     console.log(arr);
-    
-    return(
+        return(
         <div className="prductBox" style={{display:isShow ? 'block':'none'}}>
             <div className="inputBox">
-                <input placeholder="name" onChange={item=>{
+                <input placeholder="name" onChange={(event)=>{
                     setCreateData((state) => {
                     return {
                         ...state,
-                          name: item.name
+                        name: event.target.value
                     }
                     })
                 }}/>
-                <input placeholder="description" nChange={item=>{
+                <input placeholder="description" onChange={(event)=>{
                     setCreateData((state) => {
                     return {
                         ...state,
-                          name: item.desc
+                        desc: event.target.value
                     }
                     })
                 }}/>
                 {/* <input placeholder="user_id"/>
                 <input placeholder="status_id"/> */}
-                <Select options={arr}/>
+                <Select options={arr} onChange={(item)=>{
+                     setCreateData((state) => {
+                    return {
+                        ...state,
+                        userId: item.value }
+                    })
+                   
+                }} />
                 
                 
-                <Select options={Status} />
-                <button className='createBtnModel' onClick={()=>{}}>CREATE</button>
+                <Select options={Status} onChange={(item)=>{
+                   setCreateData((state) => {
+                            return {
+                                ...state,
+                                statusId: item.value 
+                            }   
+                   })
+                 }} />
+                <button className='createBtnModel' onClick={()=>{createClick()}}>CREATE</button>
             </div>
         </div>
     )
